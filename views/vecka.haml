@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Vecka
+    %title= "Vecka #{@week}"
     :css
       body {
         font-family: Arial, Verdana, Helvetica;
@@ -37,7 +37,7 @@
     %table
       %tr
         %td
-          %h1= Time.new.strftime('%W')
+          %h1= @week
     
     :javascript
       var _gaq = _gaq || [];
