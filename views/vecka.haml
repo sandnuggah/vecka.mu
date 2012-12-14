@@ -2,24 +2,25 @@
 %html
   %head
     %title= "Vecka #{@week}"
-    %script{:type => "text/javascript", :src  => "/soundmanager/soundmanager2.js"}
-    
-    :javascript
-      soundManager.setup({
-        url: '/soundmanager/swf/'
-      });
+    - if @week == "48"
+      %script{:type => "text/javascript", :src  => "/soundmanager/soundmanager2.js"}
       
-      soundManager.onready(function() {
-        soundManager.createSound({
-          /* thank you for the music William (http://randomizer.se) */
-          id:       'v48',
-          url:      ['/sounds/v48.mp3', '/sounds/v48.ogg'],
-          autoLoad: true,
-          autoPlay: true,
-          volume:   80,
-          onfinish: function() { this.play() /* loop forever */ }
+      :javascript
+        soundManager.setup({
+          url: '/soundmanager/swf/'
         });
-      });
+        
+        soundManager.onready(function() {
+          soundManager.createSound({
+            /* thank you for the music William (http://randomizer.se) */
+            id:       'v48',
+            url:      ['/sounds/v48.mp3', '/sounds/v48.ogg'],
+            autoLoad: true,
+            autoPlay: true,
+            volume:   80,
+            onfinish: function() { this.play() /* loop forever */ }
+          });
+        });
     
     :css
       body {
