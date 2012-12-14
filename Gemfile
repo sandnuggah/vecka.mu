@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
-gem 'sinatra'
-gem 'thin'
-gem 'haml'
-gem 'json'
-gem 'builder'
+
+gem 'sinatra' , '~> 1.3.3'
+gem 'thin'    , '~> 1.4.1'
+gem 'haml'    , '~> 3.1.6'
+gem 'json'    , '~> 1.7.4'
+gem 'builder' , '~> 3.0.0'
