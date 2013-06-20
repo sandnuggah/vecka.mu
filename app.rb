@@ -4,7 +4,6 @@ require 'builder'
 require 'date'
 
 get '/' do
-  #@week = Time.now.strftime('%W').to_i
   @week = Date.today.cweek.to_i
   haml :vecka
 end
