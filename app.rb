@@ -10,7 +10,7 @@ end
 
 get '/api/v1/week.json' do
   content_type :json
-  {:week => Date.today.cweek.to_i}.to_json
+  { week: Date.today.cweek.to_i }.to_json
 end
 
 get '/api/v1/week.xml' do
